@@ -14,6 +14,7 @@ public class ChoosingOption {
         } else {
             System.out.println("User closed the dialog without making a  option");
             
+        }
     System.exit(0);
     }
 }
