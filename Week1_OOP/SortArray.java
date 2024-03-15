@@ -23,6 +23,7 @@ public class SortArray {
         }
         System.out.println();
         CalSum(arr);
+        sc.close();
     }
     public static void  CalSum(int[] array) {
 		int sum=0;
