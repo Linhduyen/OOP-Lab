@@ -1,3 +1,4 @@
+package Week1_OOP;
 import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args){
