@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 
 public class AddMatrix {
@@ -38,5 +36,6 @@ public class AddMatrix {
 
             System.out.println();
         }
+        sc.close();
     }
 }
