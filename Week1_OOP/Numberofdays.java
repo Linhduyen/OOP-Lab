@@ -24,6 +24,7 @@ public class Numberofdays {
             }
         }
 
+
         int year;
         boolean inputyear = false;
         while (!inputyear) {
@@ -43,5 +44,6 @@ public class Numberofdays {
                 }
             }
         }
+        sc.close();
     }
 }
