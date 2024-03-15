@@ -1,99 +1,92 @@
-
 import java.util.Scanner;
-
 public class Equation {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int c;
-        do {
-            System.out.println("The equation in this task:");
-            System.out.println("1.Solve first-degree equation (ax + b = 0)");
-            System.out.println("2.Solve system of first-degree equations (linear system) with two variables");
-            System.out.println("3.Solve second-degree equation (ax^2 + bx + c = 0)");
-            System.out.println("4.Exit");
-            System.out.print("Enter your choice: ");
-            c = scanner.nextInt();
-            switch (c) {
-                case 1:
-                    solveFirstDegreeEquation(scanner);
-                    break;
-                case 2:
-                    solveLinearSystem(scanner);
-                    break;
-                case 3:
-                    solveSecondDegreeEquation(scanner);
-                    break;
-                case 4:
-                    System.out.println("Exit!");
-                    break;
-                default:
-                    System.out.println("Invalid choice! Please choose again.");
-            }
-        } while (c!=4);
-        
-        scanner.close();
+   public static void main(String[] args){
+    Scanner scanner = new Scanner(System.in);
+    while(TRURE){
+        System.out.println("The equation in this task: ");
+        System.out.println("The first-degree equation (linear equation)");
+        System.out.println("The system of first-degree equations (linear system)");
+        System.out.println("The second-degree equation");
+        System.out.println("EXIT");
+        System.out.println("Enter choice");
+        int choice = sc.nextInt();
+        switch(choice){
+            case 1:
+                solvelinearsystem();
+                break;
+            case 2: 
+                solvelinearsystem();
+                break;
+            case 3: 
+                solveseconddegreeequation();
+                break;
+            case 4: 
+                sc.close();
+                System.out.println("EXIT!");
+                System.exit(0);
+            default: 
+                System.out.println("Invalid choice! Please choose again.");
+        }
     }
-    private static void solveFirstDegreeEquation(Scanner scanner) {
+   }
+    //The first-degree equation (linear equation) with one variable
+    public static void solvelinearsystem(Scanner sc){
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Solving first-degree equation: ax + b = 0");
         System.out.print("Enter a: ");
-        double a=scanner.nextDouble();
+        int a = scanner.nextInt();
         System.out.print("Enter b: ");
-        double b=scanner.nextDouble();
-        if (a==0) {
-            if (b==0) {
-                System.out.println("Infinite solutions");
-            } else {
-                System.out.println("No solution");
-            }
-        } 
-        else {
-            double sol= -b/a;
-            System.out.println("Solution: x = " + sol);
-            System.out.println( );
+        int b = scanner.nextInt();
+        if(a == 0){
+            if(b == 0) System.out.println("Infinity solution");
+            else System.out.println("No solution");
         }
-    }
-    private static void solveLinearSystem(Scanner scanner) {
-        System.out.println("Solving system of first-degree equations (linear system) with two variables");
-
-        System.out.println("Enter coefficients for the first equation (ax + by = c):");
-        System.out.print("Enter a: ");
-        double a= scanner.nextDouble();
-        System.out.print("Enter b: ");
-        double b= scanner.nextDouble();
-        System.out.print("Enter c: ");
-        double c= scanner.nextDouble();
-
-        System.out.println("Enter coefficients for the second equation (dx + ey = f):");
-        System.out.print("Enter d: ");
-        double d= scanner.nextDouble();
-        System.out.print("Enter e: ");
-        double e= scanner.nextDouble();
-        System.out.print("Enter f: ");
-        double f= scanner.nextDouble();
-
-        double determinant =  a*e- d*b;
-        if (determinant == 0 && (a* f- d*c == 0 && b*f - e*c == 0)) {
-            System.out.println("Infinite solutions");
-            System.out.println( );
-
-        } else if (determinant == 0) {
-            System.out.println("No solution");
-            System.out.println( );
-
-        } else {
-            double x1 = (c*e - f*b) /determinant;
-            double x2 = (a*f - d*c) / determinant;
-            System.out.println("The solution for the system of equations is: x1 = " + x1 + ", x2 = " + x2);
-            System.out.println( );
-
+        else{
+            Double solution = -b/a;
+            System.out.println("The solution is: "+ solution);
         }
+
     }
-    private static void solveSecondDegreeEquation(Scanner scanner) {
-        System.out.println("Solving second-degree equation: ax^2 + bx + c = 0");
-        System.out.print("Enter a: ");
+    //The system of first-degree equations (linear system) with two variables
+    public static void solvelinearsystem(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Solving linear system of equations (ax + by = c, dx + ey = f)");
+        System.out.println("Enter a: ");
         double a = scanner.nextDouble();
-        if (a == 0) {
-            System.out.println("This is not a second-degree equation.");
+        System.out.println("Enter b: ");
+        double b = scanner.nextDouble();
+        System.out.println("Enter c: ");
+        double c = scanner.nextDouble();
+        System.out.println("Enter coefficients for the second equation (dx + ey = f):");
+        System.out.println("Enter d: ");
+        double d = scanner.nextDouble();
+        System.out.println("Enter e: ");
+        double e = scanner.nextDouble();
+        System.out.println("Enter f: ");
+        double f = scanner.nextDouble();
+        double determiant1 = a*e - b*d;
+        double determiant2 = a*f - c*d;
+        double determiant3 = b*f - a*c;
+        if(determiant1 == 0 && determiant2 == 0 && determiant3 == 0){
+            System.out.println("Infinite solution");
+        }
+        else if(determiant1 == 0){
+            System.out.println("No solution");
+        }else{
+            double x = (c*e - b*f)/determiant1;
+            double y = (a*f - c*d)/determiant1;
+            System.out.println("The solution for the system of equations is:");
+            System.out.println("x = " + x);
+            System.out.println("y = " + y);
+        }
+    }
+    public static void solveseconddegreeequation(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Solving second-degree equation (ax^2 + bx + c = 0)");
+        System.out.println("Enter a: ");
+        double a = scanner.nextDouble();
+        if(a == 0){
+            System.out.println("This is not a second-degree equation!");
             scanner.close();
             return;
         }
@@ -101,25 +94,19 @@ public class Equation {
         double b = scanner.nextDouble();
         System.out.print("Enter c: ");
         double c = scanner.nextDouble();
-
         
-        double delta = b*b - 4*a*c;
-            if (delta > 0) {
-                double root1 = (-b +Math.sqrt(delta))/(2 * a);
-                double root2 = (-b -Math.sqrt(delta)) / (2 * a);
-                System.out.println("Two distinct roots: x1 = "+root1+ ", x2 = "+root2);
-            } 
-            else if (delta == 0) {
-                double root = -b/(2*a);
-                System.out.println("Double roots: x = " + root);
-                System.out.println( );
+        double discriminant = b*b - 4*c*a;
+        if(discriminant > 0){
+            double root1 = (-b + Math.sqrt(discriminant))/ (2 *a);
+            double root2 = (-b + Math.sqrt(discriminant))/ (2 *a);
+            System.out.println("Two distinct roots: x1 = "+root1+ ", x2 = "+root2);
+        } else if( discriminant = 0){
+            double root = -b/2*a;
+            System.out.println("The equation has only one root: " + root );
+        } else {
+            System.out.println("There are no real root in this equation");
+        }
 
-            } 
-            else {
-                System.out.println("There is no root");
-                System.out.println( );
-
-            }
-        
     }
+
 }
