@@ -1,5 +1,4 @@
 
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -27,6 +26,7 @@ public class SortArray {
     }
     public static void  CalSum(int[] array) {
 		int sum=0;
+        
 		for (int num:array) {
 			sum+=num;
 		}
