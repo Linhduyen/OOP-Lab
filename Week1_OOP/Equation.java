@@ -3,7 +3,7 @@ public class Equation {
    public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
     while(TRURE){
-        System.out.println("The equation in this task: ");
+        System.out.println("The equation in this menu: ");
         System.out.println("The first-degree equation (linear equation)");
         System.out.println("The system of first-degree equations (linear system)");
         System.out.println("The second-degree equation");
