@@ -48,6 +48,7 @@ public class Equation {
             double sol = - b /a;
             System.out.println("The solution is: " + sol);
         }
+        scanner.close();
     }
 
     private static void solveLinearSystem() {
@@ -78,6 +79,7 @@ public class Equation {
             System.out.println("x = " + x);
             System.out.println("y = " + y);
         }
+        scanner.close();
     }
 
     private static void solveSecondDegreeEquation() {
@@ -109,5 +111,6 @@ public class Equation {
         } else {
             System.out.println("There are no real root in this equation");
         }
+        scanner.close();
     }
 }

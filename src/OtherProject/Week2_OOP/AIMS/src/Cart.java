@@ -36,4 +36,21 @@ public class Cart {
         }
         return res;
     }
+    public void printOrderSummary() {
+        float totalCost = 0;
+
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+
+        int index = 1;
+        for (int i = 0; i < qtyOrdered; i++) {
+            DigitalVideoDisc dvd = itemOrder[i];
+            System.out.println(index + ". " + dvd);
+            totalCost += dvd.getCost();
+            index++;
+        }
+
+        System.out.println("Total cost: " + totalCost);
+        System.out.println("***************************************************");
+    }
 }

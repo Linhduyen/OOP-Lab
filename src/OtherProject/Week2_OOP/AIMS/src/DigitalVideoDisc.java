@@ -41,6 +41,8 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+    } 
+    public String toString() {
+        return "DVD - " + getTitle() + " - " + getCategory() + " - " + getDirector() + " - Length: " + getLength() + ": " + getCost() + " $";
     }
-    
 }
