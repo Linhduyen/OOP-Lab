@@ -1,0 +1,9 @@
+'Media' is the class that ought to implement the 'Comparable' interface.
+
+2. public int compareTo(Media other) @Override This.title.compareTo(other.title); int titleComparison = this.title.compareTo(other.title); if If titleComparison!= 0, then return titleComparison;} } return Float.compare(other.cost, title.cost);
+
+Likewise, sorting by cost and then title
+
+3. Not at all. Comparator should be used before the Comparing procedure.
+
+4. The DVD's inherited comparison function from Media should be overridden. 
