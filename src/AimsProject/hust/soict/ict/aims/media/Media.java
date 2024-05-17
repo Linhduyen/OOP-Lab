@@ -1,4 +1,4 @@
-package AimsProject.hust.soict.ict.aims.media;
+package aims.media;
 
 import java.util.Comparator;
 import java.util.Objects;

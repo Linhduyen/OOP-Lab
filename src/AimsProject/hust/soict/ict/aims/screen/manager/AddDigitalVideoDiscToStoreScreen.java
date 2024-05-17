@@ -1,7 +1,7 @@
-package AimsProject.hust.soict.ict.aims.screen.manager;
+package aims.screen.manager;
 
-import AimsProject.hust.soict.ict.aims.media.DigitalVideoDisc;
-import AimsProject.hust.soict.ict.aims.store.Store;
+import aims.media.DigitalVideoDisc;
+import aims.store.Store;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

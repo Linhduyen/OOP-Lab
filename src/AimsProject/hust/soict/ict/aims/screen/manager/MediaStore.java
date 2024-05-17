@@ -1,9 +1,9 @@
-package AimsProject.hust.soict.ict.aims.screen.manager;
+package aims.screen.manager;
 
-import AimsProject.hust.soict.ict.aims.media.CompactDisc;
-import AimsProject.hust.soict.ict.aims.media.DigitalVideoDisc;
-import AimsProject.hust.soict.ict.aims.media.Media;
-import AimsProject.hust.soict.ict.aims.media.Playable;
+import aims.media.CompactDisc;
+import aims.media.DigitalVideoDisc;
+import aims.media.Media;
+import aims.media.Playable;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,5 +1,8 @@
-package AimsProject.hust.soict.ict.aims.screen.manager;
+package aims.screen.manager;
 import javax.swing.*;
+
+import aims.store.*;
+import aims.media.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

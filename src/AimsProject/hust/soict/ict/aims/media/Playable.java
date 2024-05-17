@@ -1,4 +1,4 @@
-package AimsProject.hust.soict.ict.aims.media;
+package aims.media;
 
 public interface Playable {
     public void play();
